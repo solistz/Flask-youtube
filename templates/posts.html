@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %}Home pages{% endblock %}
+{% block title %}POsts pages{% endblock %}
 {% block body %}
+<div class="container">
 <h3>Posts Pages</h3>
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.intro }}</p>
+        <p><b>{{ el.date.date() }}</b></p>
+<!--        <button class="btn btn-warning">Відкрити</button>-->
+        <a href="/posts/{{ el.id }}" class="btn btn-warning">Відкрити</a>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
