@@ -7,6 +7,9 @@
     <div class="alert alert-info">
         <p>{{ article.text }}</p>
         <p><b>{{ article.date.date() }}</b></p>
+        <a href="/posts/{{ article.id }}/del" class="btn btn-danger">DELETE</a>
+        <a href="/posts/{{ article.id }}/upd" class="btn btn-success">EDIT</a>
+
     </div>
 </div>
 {% endblock %}
